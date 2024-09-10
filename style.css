@@ -106,14 +106,21 @@ body {
     animation-delay: 13s;
 }
 
-
-
 .text-box {
     padding: 20px 30px;
     background: #fff;
     position: relative;
     border-radius: 6px;
     font-size: 15px;
+    transition: all 0.5s;
+}
+.text-box:hover{
+    background: #cfcfcf;
+}
+
+.text-box-link{
+    text-decoration: none;
+    color: #000000;
 }
 
 .left-container {
@@ -193,6 +200,36 @@ body {
     left: -15px;
 }
 
+/* ----- Tooltip para poner proximamente ----- */
+#tooltipText{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: #fff;
+    white-space: nowrap;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+#tooltipText::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+.text-box:hover #tooltipText{
+    top: -10%;
+    visibility: visible;
+    opacity: 1;
+}
+/* ----- Tooltip para poner proximamente ----- */
 
 @media screen and (max-width: 600px) {
     .timeline {
