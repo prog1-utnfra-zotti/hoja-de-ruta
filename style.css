@@ -16,11 +16,20 @@ body {
     background: #046EA0;
 }
 
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+
 .title-page {
     text-align: center;
     color: #fff;
     font-size: 2.5rem;
-    padding-top: 2rem;
 }
 
 .timeline {
@@ -232,6 +241,13 @@ body {
 /* ----- Tooltip para poner proximamente ----- */
 
 @media screen and (max-width: 600px) {
+    .header-container h1{
+        font-size: 2rem;
+    }
+    .header-container img{
+        display: none;
+    }
+
     .timeline {
         margin: 50px auto;
     }
